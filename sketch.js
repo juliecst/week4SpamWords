@@ -15,7 +15,7 @@ let canvas;
 function setup() {
  words = splitTokens(texts, ' ');
   console.log(words)
-  canvas = createCanvas(windowWidth, windowHeight/2);
+  canvas = createCanvas(windowWidth, windowHeight);
   getWordCount()
   
 }
@@ -28,7 +28,7 @@ function draw() {
   for(let i = 0; i<num.length-1; i++){
     diam = num[i];
     fill(150, 5*i, 153)
-    ellipse(i*10, i+50, diam*(i-1)/2);
+    ellipse(i*10*cos(-1)+50, i*sin(0.5)+ windowHeight/2, diam*(i-1)/2);
   }
  
 }
